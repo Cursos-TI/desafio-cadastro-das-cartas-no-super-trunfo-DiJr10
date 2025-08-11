@@ -19,6 +19,9 @@ int main() {
 	float densidade1, densidade2;
 	float percapita1, percapita2;
 	
+	populacao1=(float)populacao1;
+	populacao2=(float)populacao2;
+
 	densidade1=populacao1/area1;
 	densidade2=populacao2/area2;
 	percapita1=pib1/populacao1;
