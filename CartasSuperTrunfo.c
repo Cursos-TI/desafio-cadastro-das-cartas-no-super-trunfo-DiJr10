@@ -4,7 +4,7 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-// Teste Dínice Júnior
+// Teste Dínice Júnior - Versão Aventureiro
 
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
@@ -16,6 +16,13 @@ int main() {
 	float area1, area2;
 	float pib1, pib2;
 	int pontos1, pontos2;
+	float densidade1, densidade2;
+	float percapita1, percapita2;
+	
+	densidade1=populacao1/area1;
+	densidade2=populacao2/area2;
+	percapita1=pib1/populacao1;
+	percapita2=pib2/populacao2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -79,7 +86,9 @@ int main() {
 	printf("População: %d habitantes\n", populacao1);
 	printf("Área:      %.2f km2\n", area1);
 	printf("PIB:       %.2f Reais\n", pib1);
-	printf("Pontos Turísticos: %d Locais\n", pontos1);
+	printf("Pontos Turísticos:      %d Locais\n", pontos1);
+	printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+	printf("PIB per Capita:         %.2f Reais\n", percapita1);
 
 	printf("\nInformações da Carta 02\n");
 	printf("Código:    %s\n", codigo2);
@@ -87,7 +96,9 @@ int main() {
 	printf("População: %d habitantes\n", populacao2);
 	printf("Área:      %.2f km2\n", area2);
 	printf("PIB:       %.2f Reais\n", pib2);
-	printf("Pontos Turísticos: %d Locais\n\n\n", pontos2);
+	printf("Pontos Turísticos:      %d Locais\n", pontos2);
+	printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+	printf("PIB per Capita:         %.2f Reais\n", percapita2);
 
     return 0;
 }
