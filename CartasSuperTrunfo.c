@@ -13,7 +13,7 @@ int main() {
 	char estado1, estado2;
     char codigo1[4], codigo2[4]; // Necessário tamanho 4 para caber os 3 caracteres mais o caracter nulo \0 sem causar erro na execução.
 	char nome1[30], nome2[30];
-	int populacao1, populacao2;
+	unsigned long int populacao1, populacao2;
 	float area1, area2;
 	float pib1, pib2;
 	int pontos1, pontos2;
@@ -39,7 +39,7 @@ int main() {
 	scanf("%s", nome1);
 
 	printf("Informe a População da Carta: ");
-	scanf("%d", &populacao1);
+	scanf("%lu", &populacao1);
 
 	printf("Informe a Área em Km2 da Carta: ");
 	scanf("%f", &area1);
@@ -65,7 +65,7 @@ int main() {
 	scanf("%s", nome2);
 
 	printf("Informe a População da Carta: ");
-	scanf("%d", &populacao2);
+	scanf("%lu", &populacao2);
 
 	printf("Informe a Área em Km2 da Carta: ");
 	scanf("%f", &area2);
@@ -80,8 +80,8 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-	densidade1 = (float)populacao1 / area1;
-    densidade2 = (float)populacao2 / area2;
+	densidade1 = (long double)populacao1 / area1;
+    densidade2 = (long double)populacao2 / area2;
     percapita1 = pib1 / populacao1;
     percapita2 = pib2 / populacao2;
 
@@ -92,7 +92,7 @@ int main() {
 	printf("Estado:    %c\n", estado1);
 	printf("Código:    %s\n", codigo1);
 	printf("Cidade:    %s\n", nome1);
-	printf("População: %d habitantes\n", populacao1);
+	printf("População: %lu habitantes\n", populacao1);
 	printf("Área:      %.2f km²\n", area1);
 	printf("PIB:       %.2f Reais\n", pib1);
 	printf("Pontos Turísticos:      %d Locais\n", pontos1);
@@ -103,7 +103,7 @@ int main() {
 	printf("Estado:    %c\n", estado2);
 	printf("Código:    %s\n", codigo2);
 	printf("Cidade:    %s\n", nome2);
-	printf("População: %d habitantes\n", populacao2);
+	printf("População: %lu habitantes\n", populacao2);
 	printf("Área:      %.2f km²\n", area2);
 	printf("PIB:       %.2f Reais\n", pib2);
 	printf("Pontos Turísticos:      %d Locais\n", pontos2);
